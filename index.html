@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="courses" content="Liste de courses" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Liste de courses</title>
+
+    <!--Font awesome-->
+    <link
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Quintessential&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="normalize.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Liste de courses</h1>
+    </header>
+    <main class="container">
+      <div class="buttons buttons-top">
+        <button id="addButton">Ajouter un produit</button>
+        <div id="target"></div>
+        <form class="hide">
+          <div class="infos">
+            <p class="fields">
+              <label for="nameProduct">Nom du produit</label>
+              <input type="text" name="produit" id="nameProduct" />
+            </p>
+            <p class="fields">
+              <label for="quantity">Quantité</label>
+              <input type="number" name="quantity" min="1" id="quantity" />
+            </p>
+            <p class="fields">
+              <label for="unity">Unité</label>
+              <input type="text" name="unity" id="unity" />
+            </p>
+            <p class="fields">
+              <label for="category">Catégorie</label>
+              <select name="category" id="category">
+                <option value="0">Tous rayons</option>
+                <optgroup label="Alimentation">
+                  <option value="1">Boissons</option>
+                  <option value="2">Boulangerie</option>
+                  <option value="3">Fromage</option>
+                  <option value="4">Fruits</option>
+                  <option value="5">Légumes</option>
+                  <option value="6">Poissons</option>
+                  <option value="7">Produits frais</option>
+                  <option value="7">Produits laitiers</option>
+                  <option value="8">Viandes</option>
+                </optgroup>
+                <optgroup label="Bazar">
+                  <option value="18">Automobiles</option>
+                  <option value="19">Électroménager-électronique</option>
+                  <option value="20">Jardinerie</option>
+                  <option value="21">Jouets</option>
+                  <option value="22">Papeterie</option>
+                  <option value="23">Produits culturels</option>
+                </optgroup>
+                <optgroup label="DPH">
+                  <option value="9">Cosmétique-Parfumerie</option>
+                  <option value="10">Droguerie</option>
+                  <option value="11">Pharmacie</option>
+                </optgroup>
+                <optgroup label="Épicerie">
+                  <option value="12">Animaux</option>
+                  <option value="13">Épicerie salée</option>
+                  <option value="14">Épicerie sucrée</option>
+                </optgroup>
+                <optgroup label="Textile">
+                  <option value="15">Femmes</option>
+                  <option value="16">Hommes</option>
+                  <option value="17">Enfants</option>
+                </optgroup>
+              </select>
+            </p>
+          </div>
+          <input id="submit" type="button" class="submit" value="Valider" />
+        </form>
+      </div>
+      <div id="shoppingList">
+        <p>Vous avez <span>0 article</span> à acheter.</p>
+        <p>Votre liste est la suivante :</p>
+        <div id="list">
+          <table>
+            <thead>
+              <tr>
+                <th>Mis au panier</th>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Unité</th>
+                <th>Catégorie</th>
+                <th>Supprimer</th>
+              </tr>
+            </thead>
+            <tbody class="bodyTab">
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="reset">Vider ma liste</button>
+      </div>
+    </main>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+/* font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Quintessential', cursive;
+font-family: 'Caveat', cursive;*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: 'Nunito Sans', 'Open Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100%;
+  width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #e6f1ff;
+}
+
+header h1 {
+  font-family: 'Caveat', normal;
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+header h1::before,
+h1::after {
+  content: '\f07a';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 2.5rem;
+  margin: 15px;
+}
+
+button {
+  font-size: 2.2rem;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 100%;
+  margin: 20px auto;
+  border: none;
+  box-shadow: 2px 2px 5px 0 grey;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons-top {
+  border-bottom: 1px solid black;
+}
+
+#addButton {
+  background-color: #87ed9e;
+  cursor: pointer;
+}
+#addButton::before {
+  content: '\f0fe';
+  font-family: 'Font Awesome 5 Free';
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.barred {
+  text-decoration: line-through;
+}
+#reset {
+  background-color: #ff4646;
+  cursor: pointer;
+}
+#reset::before {
+  content: '\f2ed';
+  font-family: 'Font Awesome 5 Free';
+  margin: 10px;
+}
+
+#list {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.submit {
+  cursor: pointer;
+  width: 30%;
+  margin: 3rem auto 0 auto;
+  border: none;
+  background-color: #8bf78b;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  padding: 1rem 0;
+  margin-bottom: 10px;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 10px 20px;
+}
+
+thead {
+  background-color: rgb(150, 149, 149);
+}
+
+table tr {
+  border: 1px solid black;
+}
+
+#shoppingList {
+  text-align: center;
+}
+
+#shoppingList span {
+  font-weight: bold;
+}
+
+input {
+  border: 1px solid #838383;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 60%;
+}
+
+select {
+  border: 1px solid #838383;
+  border-radius: 5px;
+  padding: 0.2rem;
+  width: 60%;
+}
+
+@media screen and (min-width: 700px) {
+  .infos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .fields {
+    width: 40%;
+  }
+  input,
+  select {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+  }
+  thead {
+    display: none;
+  }
+
+  table {
+    border: none;
+  }
+  tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  td {
+    padding-left: 150px;
+    position: relative;
+  }
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    bottom: 0;
+    background-color: rgb(150, 149, 149);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+  tr {
+    margin-bottom: 1rem;
+  }
+}
